@@ -22,7 +22,8 @@
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
   scroll-behavior: smooth;
@@ -60,9 +61,7 @@ em { font-style: italic; color: var(--accent-light); }
   color: var(--text);
   font-weight: 700;
   font-size: 1.05rem;
-  text-decoration: none;
 }
-.topbar-logo:hover { text-decoration: none; }
 
 .topbar-icon { width: 26px; height: 26px; }
 [data-theme="dark"] .topbar-icon { filter: invert(1) brightness(2); }
@@ -149,7 +148,12 @@ em { font-style: italic; color: var(--accent-light); }
   text-decoration: none;
 }
 
-.card-icon { font-size: 1.6rem; display: block; margin-bottom: 0.6rem; }
+.card-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.6rem;
+}
 
 .card h3 {
   font-size: 1.1rem;
