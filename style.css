@@ -64,7 +64,7 @@ em { font-style: italic; color: var(--accent-light); }
 }
 
 .topbar-icon { width: 26px; height: 26px; }
-[data-theme="dark"] .topbar-icon { filter: invert(1) brightness(2); }
+
 
 .theme-btn {
   background: none;
@@ -105,7 +105,6 @@ em { font-style: italic; color: var(--accent-light); }
 }
 
 .hero-logo { width: 90px; height: 90px; margin-bottom: 1rem; }
-[data-theme="dark"] .hero-logo { filter: invert(1) brightness(2); }
 
 .hero-sub {
   color: var(--text-muted);
@@ -150,8 +149,8 @@ em { font-style: italic; color: var(--accent-light); }
 
 .card-icon {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 90px;
+  height: 90px;
   margin-bottom: 0.6rem;
 }
 
