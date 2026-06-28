@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>napttr · nostr accounting program tools</title>
+  <meta name="description" content="Nostr accounting program tools (transmitted through relays). Access nap for ledger entries and noks for keyring signing.">
   <link rel="icon" type="image/svg+xml" href="assets/napttr.svg">
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#6d28d9">
+  <script>
+    /* Apply dark theme before first paint to prevent flash */
+    (function () {
+      var saved = localStorage.getItem("napttr-theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,7 +30,7 @@
 
   <main class="hero">
     <div class="hero-content">
-      <!--<h1>Decentralised accounting on <em>nostr</em>.</h1>-->
+      <h1 class="sr-only">napttr — nostr accounting program tools</h1>
       <img src="assets/napttr.svg" alt="napttr logo" class="hero-logo">
       <p class="hero-sub">
         Nostr accounting program (nap) tools<br>(transmitted through relays).
@@ -43,14 +52,14 @@
         </a>
       </div>
     </section>
-
-    <footer class="footer">
-      <p>
-        this page:
-        <a href="https://github.com/paulle0/napttr" target="_blank" rel="noopener">napttr</a>
-      </p>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <p>
+      this page:
+      <a href="https://github.com/paulle0/napttr" target="_blank" rel="noopener">napttr</a>
+    </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

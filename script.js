@@ -2,25 +2,20 @@
   var STORAGE_KEY = "napttr-theme";
   var toggle = document.getElementById("theme-toggle");
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
+  function setIcon(theme) {
     toggle.textContent = theme === "dark" ? "☾" : "☀";
   }
 
-  /* Initialise from saved pref or system pref */
-  var saved = localStorage.getItem(STORAGE_KEY);
-  if (saved) {
-    applyTheme(saved);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    applyTheme("dark");
-  }
+  /* Sync button icon with theme set by inline head script */
+  setIcon(document.documentElement.getAttribute("data-theme") || "light");
 
   toggle.addEventListener("click", function () {
     var next =
       document.documentElement.getAttribute("data-theme") === "dark"
         ? "light"
         : "dark";
-    applyTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+    setIcon(next);
     localStorage.setItem(STORAGE_KEY, next);
   });
 })();
