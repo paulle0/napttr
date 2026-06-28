@@ -1,0 +1,21 @@
+{
+  "name": "napttr",
+  "short_name": "napttr",
+  "description": "Nostr accounting program tools (transmitted through relays)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#6d28d9",
+  "theme_color": "#6d28d9",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
